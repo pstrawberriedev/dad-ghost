@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{!--
+<section class="index-story">
+  {{#post}}
+    {{#if image}}<img class="index-story__image" src="{{image}}" alt="Dean DePaolo Portrait">{{/if}}
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+  {{/post}}
+</section>
+--}}
+
+<div class="container__large">
+  {{#post}}<h2>{{title}}</h2>{{/post}}
+  {{#get "posts" include="tags" limit="all"}}
+    <section class="card-area">
+      {{> "loop"}}
+    </section>
+  {{/get}}
+</div>

@@ -1,0 +1,60 @@
+/*
+  Default Theme
+  Josh.care, "Blue Ponie"
+*/
+
+// Base Colors
+@white: #fff;
+@black: #000;
+@light: #efefef;
+@dark: #333;
+@dark-lighter: #464646;
+@gray: #999;
+@gray-light: #ccc;
+@gray-accent: #dddddd;
+
+// ** Element Colors **
+// Don't put anything other than colors in here!
+body.theme-default {
+  background:@light;
+  color:@dark;
+
+  // Navigation
+  .nav__default {
+    background:@white;
+  }
+
+  // Footer
+  .footer__default {
+    background:@dark;
+    color:@white;
+  }
+  .footer__default_copy {
+    color:@gray;
+  }
+
+  // Cards
+  .card__wrap {
+    //background:@white;
+    color:@black;
+    //.shadow-1;
+  }
+  .card__time {
+    border-color:@gray-accent;
+  }
+
+  // Music (Index)
+  .index-music {
+    background:@white;
+    border-color: @gray-accent;
+  }
+
+  // Post
+  .post__footer {
+    background:@dark;
+    color:@white;
+    border-color:@dark-lighter;
+    a {border-color:@dark-lighter;}
+  }
+
+}

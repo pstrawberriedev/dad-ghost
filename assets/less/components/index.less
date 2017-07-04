@@ -1,0 +1,77 @@
+/*
+  Index Page
+*/
+
+.page-index {
+  .block;.relative;.clearfix;
+}
+
+// My Story
+.index-story {
+  .block;.relative;
+  width:100%;
+  text-align:justify;
+  .container__large;
+  margin-bottom:2.5rem;
+  min-height:360px;
+
+    h2 {
+      .relative;top:-.5rem;
+      margin-bottom:.5rem;
+    }
+    img {
+      float:right;
+      margin-left:1.5rem;
+      margin-bottom:1rem;
+      //border:6px solid @white;
+      .shadow-2;
+    }
+    &__image--mobile {
+      display:none;
+    }
+}
+
+// My Music
+.index-music {
+  .block;.relative;
+  width:100%;
+  text-align:center;
+  margin-bottom:3.2rem;
+  border:1px solid transparent;
+  border-left:0;border-right:0;
+}
+.index-music__wrapper {
+  .container__large;
+  padding:2rem 0 0 0;
+    a {
+      .block;.relative; h3 {cursor:pointer;}
+    }
+    h2 {margin-bottom:3rem;}
+    img {
+      .inline-block;
+      margin-bottom:.85rem;
+    }
+}
+.music__title {
+  .font-title;
+}
+
+// Media Queries
+@media all and (max-width:1000px) {
+  h2, .index-music__wrapper h2 {text-align:center;}
+  .index-story {
+    padding:0;
+    h2,p {padding:0 1.2rem;}
+    img {
+      float:none;
+      .block;.relative;
+      border:0;
+      margin-left:auto;
+      margin-right:auto;
+      margin-bottom:2rem;
+    }
+  }
+  .index-music__wrapper {
+    padding-bottom:1.5rem;
+  }
+}

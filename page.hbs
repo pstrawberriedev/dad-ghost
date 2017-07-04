@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{!-- This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the page --}}
+{{#post}}
+  <div class="container__large">
+    <h1>{{title}}</h1>
+    {{#if image}}
+      <img class="featured" src="{{image}}" alt="Post Image">
+    {{/if}}
+    {{content}}
+  </div>
+{{/post}}

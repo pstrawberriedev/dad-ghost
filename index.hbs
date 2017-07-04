@@ -1,0 +1,44 @@
+{{!< default}}
+
+<main class="page-index" role="main">
+
+  {{!-- Story --}}
+  <section class="index-story">
+    {{#foreach posts}}
+      {{#has tag="#about"}}
+        {{#if image}}<img class="index-story__image" src="{{image}}" alt="Dean DePaolo Portrait">{{/if}}
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+      {{/has}}
+    {{/foreach}}
+  </section>
+
+    {{!-- Music --}}
+    <section class="index-music">
+      <div class="index-music__wrapper">
+        <h2>Music</h2>
+        <div class="grid__half">
+          {{#foreach posts}}
+            {{#has tag="#cd"}}
+              <div class="grid__half_col">
+                <a href="{{url}}">
+                  <img src={{image}} alt="{{title}} CD Cover">
+                  <h3 class="music__title">{{title}}</h3>
+                </a>
+              </div>
+            {{/has}}
+          {{/foreach}}
+        </div>
+      </div>
+    </section>
+
+  {{!-- Recent Posts --}}
+  <div class="container__large">
+    <h2><a href="/blog">Blog</a></h2>
+    <section class="card-area">
+      {{> "loop"}}
+    </section>
+    <br>
+  </div>
+
+</main>

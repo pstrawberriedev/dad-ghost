@@ -1,0 +1,70 @@
+/*
+  Cards
+*/
+
+// Grid
+.card-area {
+  .relative;.clearfix;
+  .flex-display();
+  .flex-direction(row);
+  .align-items(stretch);
+  .flex-wrap(wrap);
+  .justify-content(start);
+  margin-bottom:2.5rem;
+
+    .card {
+      .flex-direction(column);
+      margin-bottom:.2rem;
+      padding:.5rem;
+      width:25%;
+    }
+    .card__wrap {
+      .block;.relative;
+      width:100%;
+      height:100%;
+      padding:.6rem;
+      padding-bottom:35px;
+      .border-radius(.25rem);
+    }
+
+    @media all and (max-width:1179px) {
+      .card {width:33.333%}
+    }
+    @media all and (max-width:979px) {
+      .card {width:50%}
+    }
+    @media all and (max-width:670px) {
+      .block;.clearfix;
+      .card {width:100%;.block;padding:0;}
+      .card__wrap {margin-bottom:1.2rem;}
+    }
+
+}
+
+// Card style
+.card__title {
+  .block;.relative;
+  .font-title;
+  font-size:1.25rem;
+  margin-bottom:.3rem;
+}
+
+.card__excerpt {
+  .block;
+  text-align:justify;
+  font-size:.85rem;
+  margin-bottom:.75rem;
+}
+
+.card__time {
+  .block;.absolute;
+  left:.55rem;
+  right:.55rem;
+  bottom:0;
+  height:30px;
+  font-size:12px;
+  padding:6px 2px 0 0;
+  text-align:right;
+  border-top:1px solid transparent;
+  border-bottom:1px solid transparent;
+}

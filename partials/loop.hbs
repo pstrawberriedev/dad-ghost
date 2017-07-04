@@ -1,0 +1,20 @@
+{{#foreach posts}}
+  {{#has tag="#about,#cd"}}
+    {{else}}
+    <div class="card {{post_class}}">
+      <a href="{{url}}" class="card__wrap">
+        <span class="card__title">{{title}}</span>
+        {{#if image}}
+        <img src="{{image}}" alt="Post image">
+        {{else}}
+        <span class="card__excerpt">
+          {{excerpt words="90"}}...
+        </span>
+        {{/if}}
+        <time class="card__time" datetime="{{date format="YYYY-MM-DD"}}">Written {{date format="MMM DD, YYYY"}}</time>
+      </a>
+    </div>
+  {{/has}}
+{{/foreach}}
+
+{{!-- pagination --}}

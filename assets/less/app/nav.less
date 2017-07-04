@@ -1,0 +1,60 @@
+/*
+  Navigation
+*/
+body {
+  padding-top:6rem;
+}
+
+.nav__default {
+  .shadow-1;
+  .block;.fixed;.clearfix;
+  width:100%;
+  top:0;left:0;
+  z-index:10;
+}
+
+.nav__default_menu { // <ul>
+  .block;.relative;
+
+  &_left {
+    float:left;
+  }
+  &_right {
+    float:right;
+  }
+}
+
+.nav__default_menu_item { // <li>
+  .inline-block;.relative;
+  font-weight:400;
+
+  a {
+    .block;.relative;
+    padding:1rem 0rem;
+    &:last-child {
+      padding-right:1.25rem;
+    }
+    &.active {
+      font-weight:700;
+    }
+  }
+
+  &--logo {
+    .font-title;
+    font-size:1.6rem;
+
+    a, a:last-child {
+      padding:.8rem;
+    }
+  }
+}
+
+@media all and (max-width:480px) {
+  .nav__default_menu_item {
+    font-size:1rem;
+    &--logo {
+      font-size:1.2rem;
+      a, a:last-child {padding-top:1rem;}
+    }
+  }
+}

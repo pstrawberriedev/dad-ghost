@@ -1,0 +1,24 @@
+/*
+  Grid (flex)
+*/
+
+// Half Grid
+.grid__half {
+  .flex-display();
+  .flex-direction(row);
+  .flex-wrap(no-wrap);
+  .clearfix;.relative;
+}
+
+.grid__half_col {
+  .flex-direction(column);
+  width:50%;
+  margin-bottom:2.5rem;
+}
+
+@media all and (max-width:1000px) {
+  .grid__half {.block;}
+  .grid__half_col {
+    width:100%;
+  }
+}

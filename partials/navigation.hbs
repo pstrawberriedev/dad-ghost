@@ -1,0 +1,14 @@
+<nav class="nav__default">
+  <ul class="nav__default_menu nav__default_menu_left">
+    <li class="nav__default_menu_item nav__default_menu_item--logo">
+      <a href="/">Dean DePaolo</a>
+    </li>
+  </ul>
+  <ul class="nav__default_menu nav__default_menu_right">
+    {{#foreach navigation}}
+      <li class="nav__default_menu_item">
+        <a href="{{url absolute="true"}}"{{#if current}} class="active"{{/if}}>{{label}}</a>
+      </li>
+    {{/foreach}}
+  </ul>
+</nav>

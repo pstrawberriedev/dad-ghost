@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+<section class="post__main">
+  <h2>
+    {{title}}
+    <span>{{date format="MMMM Do, YYYY"}}</span>
+  </h2>
+  {{#if image}}<img class="post__image" src="{{image}}" alt="Dean DePaolo Portrait">{{/if}}
+  {{content}}
+</section>
+
+{{!-- Links to Previous/Next posts --}}
+<div class="post__footer">
+  <div class="container__large">
+    <h2>Read more<h2>
+    <aside class="grid__half recent">
+      {{#next_post}}
+      <a class="grid__half_col" href="{{url}}">
+        <span>&lsaquo;</span>
+        <h3>{{title}}</h3>
+      </a>
+      {{/next_post}}
+      {{#prev_post}}
+        <a class="grid__half_col" href="{{url}}">
+          <h3>{{title}}</h3>
+          <span>&rsaquo;</span>
+        </a>
+      {{/prev_post}}
+    </aside>
+    <a href="/blog">
+      <h3>View All Posts</h3>
+    </a>
+  </div>
+</div>
+{{/post}}
